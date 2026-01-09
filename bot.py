@@ -2,13 +2,14 @@ import asyncio
 import json
 from pathlib import Path
 from datetime import datetime
+import os
 
 from playwright.async_api import async_playwright
 from telegram import Bot
 
 # ================== НАЛАШТУВАННЯ ==================
-BOT_TOKEN = "PASTE_BOT_TOKEN_HERE"
-CHAT_ID = 414989524
+BOT_TOKEN = os.getenv (BOT_TOKEN)
+CHAT_ID = int(os.getenv("CHAT_ID", "414989524"))
 
 CHECK_INTERVAL = 60  # перевірка кожні 60 секунд
 MAX_PAGES = 10       # скільки сторінок афіші перевіряємо
