@@ -1,14 +1,15 @@
 import asyncio
 import json
+import os
 from pathlib import Path
 from datetime import datetime
-import os
+
 
 from playwright.async_api import async_playwright
 from telegram import Bot
 
 # ================== НАЛАШТУВАННЯ ==================
-BOT_TOKEN = os.getenv (BOT_TOKEN)
+BOT_TOKEN = os.getenv ("BOT_TOKEN")
 CHAT_ID = int(os.getenv("CHAT_ID", "414989524"))
 
 CHECK_INTERVAL = 60  # перевірка кожні 60 секунд
