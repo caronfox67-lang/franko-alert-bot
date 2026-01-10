@@ -100,10 +100,6 @@ async def main():
     while True:
         try:
             await monitor(bot)
-        except Exception as e:
-            print("ERROR:", e)
-
-        await asyncio.sleep(CHECK_INTERVAL)
 
 
 if __name__ == "__main__":
